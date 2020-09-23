@@ -1,0 +1,38 @@
+{
+  "name": "darkzone-hunters",
+  "version": "1.0.0",
+  "description": "Find user's hunters in the Darkzone game",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorer88/darkzone-hunters.git"
+  },
+  "keywords": [
+    "darkzone",
+    "game",
+    "mongodb"
+  ],
+  "author": "Igor Escalona (igorer88@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igorer88/darkzone-hunters/issues"
+  },
+  "homepage": "https://github.com/igorer88/darkzone-hunters#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
