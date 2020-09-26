@@ -1,0 +1,15 @@
+{
+	"appName": "Darkzone-Hunters",
+	"development" : {
+		"encoding": "utf-8",
+		"mongo": {
+			"host" : "localhost",
+			"port": 27017,
+			"db" : "darkzone-hunters",
+			"user" : "root",
+			"password" : "1234"
+			}
+		},
+  	"test":{
+  }
+}
