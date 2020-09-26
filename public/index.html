@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darkzone's Hunters</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="userInfo"></div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered actions">
+          <div class="actions">
+            <button class="button is-primary" onclick="getRandom()">Get Random</button>
+            <button class="button is-primary" onclick="getFriends()">Get Friends</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column is-full">
+            <div class="inbox">
+              <div class="inbox__messages">
+                <div class="messages__last"></div>
+                <div class="messages__history"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
