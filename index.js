@@ -38,7 +38,7 @@ io.on('connection', socket => {
   });
   socket.on('getRandom', async data => {
     let newData = `Random Hunters\n`;
-    newData += events.getRandom(data);
+    newData += await events.getRandom(data);
     io.emit('gotRandom', newData);
   });
 });
