@@ -26,31 +26,25 @@ app.use(cors());
 // Static files
 app.use(express.static("public"));
 
-io.on('connection', client => {
+io.on('connection', socket => {
   console.log('Socket > Client connected...');
   io.emit('new user');
 
-  client.on('getFriends', async data => {
+  socket.on('getFriends', async data => {
     // console.log(data);
     let newData = `Friends' Hunters\n`;
     newData += await events.getFriends(data);
     io.emit('gotFriends', newData);
   });
-  client.on('getRandom', data => {
-    console.log(data);
+  socket.on('getRandom', async data => {
     let newData = `Random Hunters\n`;
+    newData += events.getRandom(data);
     io.emit('gotRandom', newData);
-  });
-
-  io.on("disconnect", () => {
-    io.emit("user disconnected");
-    console.log('Socket > Client disconnected...')
   });
 });
 
 try {
   database.db;              // Initialize the DB connection for testing
-  // console.log(`✔ A list of hunters from MongoDB can be found at: http://${host}:${port}/api/hunters`);
 } catch (e) {
   console.error('There has been an error with the MongoDB server.');
 }
