@@ -22,8 +22,10 @@ const getRandom = () => {
   socket.emit('getRandom', JSON.stringify(userData));
 };
 
-// new user is connected so we grab the payload from the json file.
-getUserInfo();
+// new user is connected so we grab the user payload from the json file.
+socket.on('new user', () => {
+  getUserInfo();
+});
 
 socket.on('gotFriends', (data) => {
   console.log('gotFriends', data);
